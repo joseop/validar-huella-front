@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrar Estudiante Externo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/global.css" />
+  </head>
+  <body>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class=" modal-dialog modal-sm">
+        <div class="modal-content text-center">
+          <div class="modal-header" >
+            <h1 class="modal-title fs-5 " id="staticBackdropLabel">Ingrese la huella</h1>
+          </div>
+          <div class="modal-body"> 
+            <img src="../images/Huella.png" alt="huella" class="img-fluid mx-auto d-block">
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section>
+        <h2>Registrar Estudiante Externo</h2>
+        <form id="registrar_estudiantee">
+          <div class="par">
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              class="input-field"
+              placeholder="Nombre"
+              required
+            />
+            <input
+              type="text"
+              id="apellido"
+              name="apellido"
+              class="input-field"
+              placeholder="Apellido"
+              required
+            />
+          </div>
+          <div class="par">
+            <input
+              type="text"
+              id="identificacion"
+              name="identificacion"
+              class="input-field"
+              placeholder="Identificación"
+              required
+            />
+            <input
+              type="text"
+              id="programa"
+              name="programa"
+              class="input-field"
+              placeholder="Programa"
+              required
+            />
+          </div>
+          <div class="par">
+            <input
+              type="text"
+              id="universidad"
+              name="universidad"
+              class="input-field"
+              placeholder="Universidad"
+              required
+            />
+            <input
+              type="text"
+              id="vinculo"
+              name="vinculo"
+              class="input-field"
+              placeholder="Vinculo"
+              required
+            />
+          </div>
+          <button id="btn_registrar"  type="submit" data-bs-toggle="modal" data-bs-target="#staticBackdrop" disabled>Registrar</button>
+          <a id="back_link" href="#" class="back-link">Volver</a>
+        </form>
+      </section>
+    </main>
+    <div id="alertContainer" class="alertC"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../js/registrar_estudiante_externo.js"></script>
+  </body>
+</html>
