@@ -19,7 +19,7 @@ document.getElementById("login_form").addEventListener("submit", async function(
                 },
                 body: JSON.stringify(login),
             });
-
+ 
             if (response.ok) {
                 const result = await response.text();
                 showAlert("Bienvenido: " + result, "success");
