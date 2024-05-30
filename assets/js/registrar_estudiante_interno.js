@@ -23,7 +23,6 @@ document
       id:identificacion.value
     };
 
-    console.log(estudiante_id);
       try {
         const response = await fetch(
           "http://localhost:8080/api/estudiante/interno",
@@ -44,9 +43,11 @@ document
                 window.location = "../html/user_home.html";
             }, 3000);
         } else {
-          modal.hide();
-          showAlert("Error al registrar estudiante", "danger"
-          );
+          const result = await response.text();
+          localStorage.setItem("message",result);
+          setTimeout(() => {
+            window.location = "../html/user_home.html";
+          }, 1300);
         }
       } catch (error) {
         modal.hide();
